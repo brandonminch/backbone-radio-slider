@@ -1,0 +1,55 @@
+ /* Radio Slider Styles */
+
+.radio-slider {
+  position: relative;
+  left: 225px;
+  overflow: hidden;
+  padding: 10px;
+}
+.radio-slider .slider {
+  float: left;
+  position: relative;
+}
+.radio-slider .segments {
+  float: left;
+}
+.radio-slider .segment {
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid #bebebe;
+  box-sizing: border-box;
+  float: left;
+  height: 15px;
+  text-indent: -9999px;
+  width: 40px;
+}
+.radio-slider .segment.first {
+  border-left: 1px solid #bebebe;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.radio-slider .segment.last {
+  border-right: 1px solid #bebebe;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.radio-slider .toggle {
+  background: red;
+  border-radius: 20px;
+  display: block;
+  height: 15px;
+  position: absolute;
+  width: 40px;
+}
+.radio-slider .toggle:after {
+  border: 5px solid transparent;
+  border-bottom-color: red;
+  content: " ";
+  display: block;
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  bottom: 100%;
+}
+.radio-slider .radios {
+  display: none;
+}

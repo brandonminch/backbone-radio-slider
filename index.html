@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+
+  <script type="text/template" id="radio-slider-template">
+    <div class="slider">
+      <div class="segments">
+        <% for (var i = 0; i < segments; i++) { %>
+          <div class="segment<% if (i == 0) { %> first<% } else if (i == segments - 1) { %> last<% } %>" data-segment="<%= i + 1 %>"><%= i + 1 %></div>
+        <% } %>
+      </div>
+      <div class="toggle"></div>
+    </div>
+  </script>
+</head>
+  <body>
+    <div class="radio-slider">
+      <div class="radios">
+        <input type="radio" name="radio" value="1" /> 1
+        <input type="radio" name="radio" value="2" /> 2
+        <input type="radio" name="radio" value="3" /> 3
+        <input type="radio" name="radio" value="4" /> 4
+        <input type="radio" name="radio" value="5" /> 5
+        <input type="radio" name="radio" value="6" /> 6
+        <input type="radio" name="radio" value="7" /> 7
+        <input type="radio" name="radio" value="8" /> 8
+        <input type="radio" name="radio" value="9" /> 9
+        <input type="radio" name="radio" value="10" /> 10
+      </div>
+    </div>
+    <script src="jquery-1.9.0.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="backbone-min.js"></script>
+    <script src="RadioSliderView.js"></script>
+    <script>
+      var radioSliderView = new RadioSliderView({
+        'el': '.radio-slider'
+      })
+    </script>
+  </body>
+</html>
